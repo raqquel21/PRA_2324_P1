@@ -20,30 +20,6 @@ class List { // Clase abstracta pura (solo hay métodos virtuales)
 		virtual int size() = 0;
 		// Destructor virtual para que las clases derivadas puedan limpiar 
 		virtual ~List(){}
-
 };
 
-
-
-
-
-/*
-template <typename T>
-class ListArray { // Falta poner que es una clase derivada
-	private:
-		T* arr; // Puntero al arra
-		int max; // Tamaño actual del array
-		int n; //Número de elementos que contiene la lista
-		static const int MINSIZE; // Deberá inicializarse a 2;
-		void resize(int new_size);
-	public:
-		// Aquí los método virtuales puros
-		ListArray();
-		~ListArray();
-		T operator[] (int pos);
-
-		friend std::ostream& operator << (std::ostream &out, const ListArray<T> &list);
-
-};
-*/
 #endif
