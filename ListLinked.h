@@ -1,8 +1,7 @@
 #include <ostream>
 #include "List.h"
 #include "Node.h"
-
-template typename<T>
+template <typename T>
 class ListLinked : public List<T> {
 	private:
 		Node<T>* first;
@@ -16,6 +15,7 @@ class ListLinked : public List<T> {
 				first = aux;
 			}
 		}
+
 		// Implementar los métodos de List.h
 		void insert(int pos, T e) override {
 			if (pos < 0 || pos > n){
@@ -48,7 +48,7 @@ class ListLinked : public List<T> {
 					current = current->next;
 				}
 				to_delete=current->next;
-				current-next= to_delete-next;
+				current->next= to_delete->next;
 			}
 			elem_eliminado = to_delete->data;
 			delete to_delete;

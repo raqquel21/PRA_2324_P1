@@ -11,11 +11,12 @@ class Node {
 		Node<T>* next;
 		//Métodos
 		//Constructor:
-		Node (T data, Node<T>* next=nullptr);
+		Node (T data, Node<T>* next=nullptr) : data(data), next(next){}
 		//Imprimir data	
 		friend std::ostream& operator<<(std::ostream &out, const Node<T> &node){
 			out << node.data;
 			return out;
+		}
 };
 
 #endif
