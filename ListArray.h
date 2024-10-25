@@ -1,8 +1,10 @@
 #ifndef LISTARRAY_H
 #define LISTARRAY_H
-#include <ostream> // Para imprimir por pantalla
+#include <iostream> // Para imprimir por pantalla
 #include <stdexcept>
 #include "List.h"
+
+
 
 template <typename T>
 class ListArray : public List<T> { // Clase derivada concreta 
@@ -25,7 +27,7 @@ class ListArray : public List<T> { // Clase derivada concreta
 		}
 	public:
 		// Constructor
-		ListArray() : max[MINSIZE], n(0){
+		ListArray() : max(MINSIZE), n(0){
 			arr = new T[MINSIZE];
 		}
 		// Destructor
