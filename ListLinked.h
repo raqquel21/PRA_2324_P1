@@ -15,7 +15,6 @@ class ListLinked : public List<T> {
 				first = aux;
 			}
 		}
-
 		// Implementar los métodos de List.h
 		void insert(int pos, T e) override {
 			if (pos < 0 || pos > n){
@@ -86,8 +85,14 @@ class ListLinked : public List<T> {
 			if(pos < 0 || pos >= n){
 				throw std::out_of_range("Fuera de rango! ");
 			}
-			return get(pos);
+			//return get(pos);
+			Node<T>* current = first;
+			for(int i = 0; i < pos; i++){
+				current = current->next;
+			}
+		return current->data;
 		}
+
 		friend std::ostream& operator<<(std::ostream &out, const ListLinked<T> &list){
 			Node<T>*current = list.first;
 			out << "[";
